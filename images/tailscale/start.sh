@@ -14,4 +14,3 @@ if [ -n "${TS_SERVE_PORT}" ]; then
   fi
 fi
 wait ${PID}
-wait ${PID}

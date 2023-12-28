@@ -1,3 +1,5 @@
 # Rename to .envrc
-export TAILSCALE_AUTH_KEY=""
-# export TAILSCALE_HOSTNAME=""
+export TS_AUTH_KEY=""
+export TS_HOSTNAME=""
+export TS_OPT=""
+export TS_SERVE_PORT=""

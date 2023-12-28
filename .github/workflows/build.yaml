@@ -8,7 +8,7 @@ on:
       - "main"
       - "v*.*.*"
     paths:
-      - "images/tailscale/**"
+      - "image/**"
 
 permissions:
   contents: read
@@ -22,7 +22,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Get the repositery's code
+      # Get the repository's code
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -63,7 +63,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: images/tailscale/.
+          context: image/.
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}

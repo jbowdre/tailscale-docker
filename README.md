@@ -32,8 +32,8 @@ You can drop these in a `.env` file alongside your `docker-compose.yml` to load 
 `docker compose up -d --build`
 - Tail logs:
 `docker compose logs --follow`
-- Access tailscale container for troubleshooting:
-`docker exec -i -t tailscale ash`
+- Access `tailscale`` container for troubleshooting:
+`docker exec -it tailscale ash`
 - Stop:
 `docker compose down`
 

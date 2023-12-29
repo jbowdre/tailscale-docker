@@ -1,7 +1,7 @@
 #!/bin/ash
 trap 'kill -TERM $PID' TERM INT
 echo "Starting Tailscale daemon"
-tailscaled --tun=userspace-networking --state=${TS_STATE} ${TS_OPT} &
+tailscaled --tun=userspace-networking --statedir="${TS_STATEDIR}" ${TS_OPT} &
 PID=$!
 until tailscale up --authkey="${TS_AUTHKEY}" --hostname="${TS_HOSTNAME}"; do
   sleep 0.1

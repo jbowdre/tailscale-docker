@@ -23,8 +23,8 @@ spec:
               value: "/var/lib/tailscale"
             - name: TS_SERVE_PORT
               value: "${TS_SERVE_PORT:-}"
-            - name: TS_FUNNEL_PORT
-              value: "${TS_FUNNEL_PORT:-}"
+            - name: TS_FUNNEL
+              value: "${TS_FUNNEL:-}"
           resources:
             limits:
               memory: "128Mi"

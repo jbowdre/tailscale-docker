@@ -22,7 +22,7 @@ Expected environment variables:
 | `TS_STATEDIR` | `/var/lib/tailscale/` | required directory for storing Tailscale state, this should be mounted to the container for persistence |
 | `TS_OPT` | `--verbose=1` | optional additional [flags](https://tailscale.com/kb/1278/tailscaled#flags-to-tailscaled) for `tailscaled` |
 | `TS_SERVE_PORT` | `8080` | optional application port to expose with [Tailscale Serve](https://tailscale.com/kb/1312/serve) |
-| `TS_FUNNEL_PORT` | `8080` | optional application port to expose **publicly** with [Tailscale Funnel](https://tailscale.com/kb/1223/funnel) |
+| `TS_FUNNEL` | `1` | if set (to anything), will proxy `TS_SERVE_PORT` **publicly** with [Tailscale Funnel](https://tailscale.com/kb/1223/funnel) |
 
 You can drop these in a `.env` file alongside your `docker-compose.yml` to load them automatically - see [.env_template](/docker-compose-example/env_template) for an example.
 

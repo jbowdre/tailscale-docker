@@ -4,9 +4,9 @@ services:
       context: ./image/
     container_name: tailscale
     environment:
-      TS_AUTH_KEY: ${TS_AUTH_KEY:?err} # from https://login.tailscale.com/admin/settings/authkeys
+      TS_AUTHKEY: ${TS_AUTHKEY:?err} # from https://login.tailscale.com/admin/settings/authkeys
       TS_HOSTNAME: ${TS_HOSTNAME:-ts-docker}
-      TS_STATE_ARG: "/var/lib/tailscale/tailscale.state" # store ts state in a local volume
+      TS_STATE: "/var/lib/tailscale/tailscale.state" # store ts state in a local volume
       TS_SERVE_PORT: ${TS_SERVE_PORT:-} # optional port to proxy with tailscale serve (ex: '80')
     volumes:
       - ./ts_data:/var/lib/tailscale/

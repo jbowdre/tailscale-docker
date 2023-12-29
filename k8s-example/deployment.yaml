@@ -15,11 +15,11 @@ spec:
         - name: tailscale
           image: ghcr.io/lpasselin/tailscale-docker:latest
           env:
-            - name: TS_AUTH_KEY
+            - name: TS_AUTHKEY
               value: "${TS_AUTH_KEY:-err}"
             - name: TS_HOSTNAME
               value: "tailscale-docker-k8s-simple"
-            - name: TS_STATE_ARG
+            - name: TS_STATE
               value: "mem:"
           resources:
             limits:

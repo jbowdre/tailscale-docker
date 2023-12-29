@@ -13,14 +13,14 @@ spec:
     spec:
       containers:
         - name: tailscale
-          image: ghcr.io/lpasselin/tailscale-docker:latest
+          image: ghcr.io/jbowdre/tailscale-docker:latest
           env:
             - name: TS_AUTHKEY
-              value: "${TS_AUTH_KEY:-err}"
+              value: "${TS_AUTHKEY:-err}"
             - name: TS_HOSTNAME
-              value: "tailscale-docker-k8s-simple"
-            - name: TS_STATE
-              value: "mem:"
+              value: "${TS_HOSTNAME:-ts-docker}"
+            - name: TS_STATEDIR
+              value: "/var/lib/tailscale"
             - name: TS_SERVE_PORT
               value: "${TS_SERVE_PORT:-}"
             - name: TS_FUNNEL_PORT

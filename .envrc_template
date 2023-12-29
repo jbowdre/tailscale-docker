@@ -1,6 +1,0 @@
-# Rename to .envrc
-export TS_AUTHKEY=""
-export TS_HOSTNAME=""
-export TS_OPT=""
-export TS_SERVE_PORT=""
-export TS_FUNNEL_PORT=""

@@ -21,6 +21,10 @@ spec:
               value: "tailscale-docker-k8s-simple"
             - name: TS_STATE
               value: "mem:"
+            - name: TS_SERVE_PORT
+              value: "${TS_SERVE_PORT:-}"
+            - name: TS_FUNNEL_PORT
+              value: "${TS_FUNNEL_PORT:-}"
           resources:
             limits:
               memory: "128Mi"

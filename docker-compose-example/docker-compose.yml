@@ -8,6 +8,7 @@ services:
       TS_HOSTNAME: ${TS_HOSTNAME:-ts-docker}
       TS_STATE: "/var/lib/tailscale/tailscale.state" # store ts state in a local volume
       TS_SERVE_PORT: ${TS_SERVE_PORT:-} # optional port to proxy with tailscale serve (ex: '80')
+      TS_FUNNEL_PORT: ${TS_FUNNEL_PORT:-} # optional port to publish publicly with tailscale funnel (ex: '80')
     volumes:
       - ./ts_data:/var/lib/tailscale/
   myservice:

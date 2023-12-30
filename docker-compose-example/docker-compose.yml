@@ -11,7 +11,7 @@ services:
       TS_SERVE_PORT: ${TS_SERVE_PORT:-} # optional port to proxy with tailscale serve (ex: '80')
       TS_FUNNEL: ${TS_FUNNEL:-} # if set, serve publicly with tailscale funnel
     volumes:
-      - ./ts_data:/var/lib/tailscale/
+      - ./ts_data:/var/lib/tailscale/   # the mountpoint should match TS_STATE_DIR
   myservice:
     image: nginxdemos/hello
     network_mode: "service:tailscale" # use the tailscale network service's network

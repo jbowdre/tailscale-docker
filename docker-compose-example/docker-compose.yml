@@ -1,11 +1,10 @@
 services:
   tailscale:
-    build:
-      context: ./image/
+    image: ghcr.io/jbowdre/tailscale-docker:latest
     container_name: tailscale
     environment:
       TS_AUTHKEY: ${TS_AUTHKEY:?err} # from https://login.tailscale.com/admin/settings/authkeys
-      TS_HOSTNAME: ${TS_HOSTNAME:-ts-docker}
+      TS_HOSTNAME: ${TS_HOSTNAME:-ts-docker} # optional hostname to use for this node
       TS_STATE_DIR: "/var/lib/tailscale/" # store ts state in a local volume
       TS_TAILSCALED_EXTRA_ARGS: ${TS_TAILSCALED_EXTRA_ARGS:-} # optional extra args to pass to tailscaled
       TS_EXTRA_ARGS: ${TS_EXTRA_ARGS:-} # optional extra flags to pass to tailscale up

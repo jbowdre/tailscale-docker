@@ -28,11 +28,11 @@ Expected environment variables:
 You can drop these in a `.env` file alongside your `docker-compose.yml` to load them automatically - see [.env_template](/docker-compose-example/env_template) for an example.
 
 ### Usage
-- Copy the `image/` directory next to your `docker-compose.yml`.
-- Start with rebuild if necessary:
+- Copy the example `docker-compose.yml` and modify to suit your needs.
+- Start:
 `docker compose up -d --build`
-- Tail logs:
-`docker compose logs --follow`
+- Tail Tailscale logs:
+`docker compose logs tailscale --follow`
 - Access `tailscale`` container for troubleshooting:
 `docker exec -it tailscale ash`
 - Stop:

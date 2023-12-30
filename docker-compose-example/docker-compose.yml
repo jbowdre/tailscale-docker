@@ -14,4 +14,4 @@ services:
       - ./ts_data:/var/lib/tailscale/
   myservice:
     image: nginxdemos/hello
-    network_mode: "service:tailscale"
+    network_mode: "service:tailscale" # use the tailscale network service's network

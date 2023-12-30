@@ -21,6 +21,10 @@ spec:
               value: "${TS_HOSTNAME:-ts-docker}"
             - name: TS_STATE_DIR
               value: "/var/lib/tailscale"
+            - name: TS_TAILSCALED_EXTRA_ARGS
+              value: "${TS_TAILSCALED_EXTRA_ARGS:-}"
+            - name: TS_EXTRA_ARGS
+              value: "${TS_EXTRA_ARGS:-}"
             - name: TS_SERVE_PORT
               value: "${TS_SERVE_PORT:-}"
             - name: TS_FUNNEL

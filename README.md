@@ -21,6 +21,7 @@ Expected environment variables:
 | `TS_HOSTNAME` | `my-app` | optional Tailscale hostname for the new node |
 | `TS_STATE_DIR` | `/var/lib/tailscale/` | required directory for storing Tailscale state, this should be mounted to the container for persistence |
 | `TS_TAILSCALED_EXTRA_ARGS` | `--verbose=1` | optional additional [flags](https://tailscale.com/kb/1278/tailscaled#flags-to-tailscaled) for `tailscaled` |
+| `TS_EXTRA_ARGS` | `--ssh` | optional additional [flags](https://tailscale.com/kb/1241/tailscale-up) for `tailscale up` |
 | `TS_SERVE_PORT` | `8080` | optional application port to expose with [Tailscale Serve](https://tailscale.com/kb/1312/serve) |
 | `TS_FUNNEL` | `1` | if set (to anything), will proxy `TS_SERVE_PORT` **publicly** with [Tailscale Funnel](https://tailscale.com/kb/1223/funnel) |
 

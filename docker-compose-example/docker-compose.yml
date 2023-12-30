@@ -7,6 +7,8 @@ services:
       TS_AUTHKEY: ${TS_AUTHKEY:?err} # from https://login.tailscale.com/admin/settings/authkeys
       TS_HOSTNAME: ${TS_HOSTNAME:-ts-docker}
       TS_STATE_DIR: "/var/lib/tailscale/" # store ts state in a local volume
+      TS_TAILSCALED_EXTRA_ARGS: ${TS_TAILSCALED_EXTRA_ARGS:-} # optional extra args to pass to tailscaled
+      TS_EXTRA_ARGS: ${TS_EXTRA_ARGS:-} # optional extra flags to pass to tailscale up
       TS_SERVE_PORT: ${TS_SERVE_PORT:-} # optional port to proxy with tailscale serve (ex: '80')
       TS_FUNNEL: ${TS_FUNNEL:-} # if set, serve publicly with tailscale funnel
     volumes:

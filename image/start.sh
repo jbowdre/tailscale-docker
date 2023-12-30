@@ -3,7 +3,7 @@ trap 'kill -TERM $PID' TERM INT
 echo "Starting Tailscale daemon"
 tailscaled --tun=userspace-networking --statedir="${TS_STATE_DIR}" ${TS_TAILSCALED_EXTRA_ARGS} &
 PID=$!
-until tailscale up --authkey="${TS_AUTHKEY}" --hostname="${TS_HOSTNAME}"; do
+until tailscale up --authkey="${TS_AUTHKEY}" --hostname="${TS_HOSTNAME}" ${TS_EXTRA_ARGS}; do
   sleep 0.1
 done
 tailscale status

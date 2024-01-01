@@ -2,6 +2,8 @@
 
 This modification of the [official Tailscale Docker image](https://github.com/tailscale/tailscale/pkgs/container/tailscale) makes it easy to [Serve](https://tailscale.com/kb/1312/serve)/[Funnel](https://tailscale.com/kb/1223/funnel) another container without needing interactive configuration.
 
+_Read more about this implementation in the [blog post](https://runtimeterror.dev/tailscale-serve-docker-compose-sidecar/)._
+
 ## Prereqs
 - A [pre-authentication key](https://tailscale.com/kb/1085/auth-keys) so the Tailscale container can log in to your tailnet.
 - [Tailscale Serve setup](https://tailscale.com/kb/1312/serve#setup)

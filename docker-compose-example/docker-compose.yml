@@ -1,6 +1,7 @@
 services:
   tailscale:
     image: ghcr.io/jbowdre/tailscale-docker:latest
+    restart: unless-stopped
     container_name: tailscale
     environment:
       TS_AUTHKEY: ${TS_AUTHKEY:?err} # from https://login.tailscale.com/admin/settings/authkeys
@@ -14,4 +15,5 @@ services:
       - ./ts_data:/var/lib/tailscale/   # the mountpoint should match TS_STATE_DIR
   myservice:
     image: nginxdemos/hello
+    restart: unless-stopped
     network_mode: "service:tailscale" # use the tailscale network service's network

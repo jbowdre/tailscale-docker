@@ -1,5 +1,8 @@
 # Tailscale in Docker with Serve/Funnel Support
 
+> [!NOTE]
+> The Tailscale Blog has a [recent post](https://tailscale.com/blog/docker-tailscale-guide) which describes how to use the `TS_SERVE_CONFIG` variable to manage Serve and Funnel with the official image. You should probably use that approach now instead of this weird one-off cobbled together by some rando.
+
 This modification of the [official Tailscale Docker image](https://github.com/tailscale/tailscale/pkgs/container/tailscale) makes it easy to [Serve](https://tailscale.com/kb/1312/serve)/[Funnel](https://tailscale.com/kb/1223/funnel) another container without needing interactive configuration.
 
 _Read more about this implementation in the [blog post](https://runtimeterror.dev/tailscale-serve-docker-compose-sidecar/)._
